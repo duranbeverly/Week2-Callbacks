@@ -24,7 +24,13 @@ console.log(result3);   // true
 *******************************************************************************/
 
 function mySome(array, cb) {
-    // Your code here
+    for(ele of array){
+        let i = array.indexOf(ele)
+        if(cb(ele,i)===  true){
+            return true
+        }
+    }
+    return false
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
