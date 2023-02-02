@@ -17,9 +17,15 @@ mapMutator(arr2, function (el, i) {
 });
 console.log(arr2); // [ 0, 9, 20 ]
 *******************************************************************************/
-
+//splice
 function mapMutator(array, cb) {
-  // Your code here
+  for (ele of array){
+    let i = array.indexOf(ele);
+    let num = cb(ele,i)
+    array.splice(i, 1, num)
+
+  }
+  return array
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

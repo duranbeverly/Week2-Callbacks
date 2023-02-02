@@ -32,9 +32,10 @@ function andSelect(array, cb1, cb2) {
   let newArr = [];
   for (ele of array) {
     if (cb1(ele) && cb2(ele)) {
-
+      newArr.push(ele)
     }
   }
+  return newArr
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

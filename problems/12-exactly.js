@@ -28,7 +28,17 @@ console.log(result4); // true
 *******************************************************************************/
 
 function exactly(array, num, cb) {
-  // Your code here
+  let counter = 0;
+  for (ele of array){
+    if (cb(ele)){
+      counter++
+    }
+  }
+  if (counter === num){
+    return true
+  } else{
+    return false
+  }
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
