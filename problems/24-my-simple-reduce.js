@@ -35,7 +35,11 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 *******************************************************************************/
 
 function mySimpleReduce(array, cb) {
-  // Your code here
+  let res;
+
+  for (ele of array) {
+
+  }
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
