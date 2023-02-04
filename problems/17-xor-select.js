@@ -31,13 +31,16 @@ console.log(
 // [ 'art', 'app', 'buttery' ]
 *******************************************************************************/
 
-let xorSelect = function(array, cb1, cb2) {
-  // Your code here
+let xorSelect = function (array, cb1, cb2) {
+  let newArr = array.filter(ele => {
+    return (cb1(ele) && !(cb2(ele))) || (cb2(ele) && !(cb1(ele)))
+  });
+  return newArr;
 };
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
   module.exports = xorSelect;
-} catch(e) {
+} catch (e) {
   return null;
 }
