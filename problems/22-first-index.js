@@ -23,12 +23,15 @@ console.log(result3); // -1
 *******************************************************************************/
 
 function firstIndex(array, cb) {
-  // Your code here
+  let value = array.find((ele) => (cb(ele)))
+  if (value == undefined) {
+    return -1;
+  } return array.indexOf(value);
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
   module.exports = firstIndex;
-} catch(e) {
+} catch (e) {
   return null;
 }

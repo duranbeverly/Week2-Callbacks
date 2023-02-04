@@ -38,12 +38,30 @@ console.log(result6);   // true
 *******************************************************************************/
 
 function one(array, cb) {
-  // Your code here
+  console.log(array);
+  count = 0;
+
+  for (let ele of array) {
+    let i = array.indexOf(ele)
+    console.log(ele);
+    console.log(cb(ele, i));
+    if (cb(ele, i)) {
+      count++
+    }
+  }
+  console.log(count)
+  if (count !== 1) {
+    return false;
+  } return true;
 }
+
+
+
+
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
   module.exports = one;
-} catch(e) {
+} catch (e) {
   return null;
 }

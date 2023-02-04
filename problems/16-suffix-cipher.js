@@ -6,6 +6,7 @@ modified according to the callback that corresponds with the suffix that the wor
 ends with. If the word does not end in any of the suffix keys, then it should not
 be modified. You can assume that only one suffix of the object will match a word.
 
+
 Examples:
 
 let cipher1 = {
@@ -32,12 +33,29 @@ console.log(suffixCipher('incremental progress is very instrumental', cipher2));
 *******************************************************************************/
 
 function suffixCipher(sentence, cipher) {
-  // Your code here
+  let newSen = []
+  let sentenceCb = sentence.split(" ")
+
+  for (let word of sentenceCb) {
+    let last = word.length - 1
+    for (let key in cipher) {
+      let num = key.length;
+      if (word.slice(last - (num + -1)) === key) {
+        let cb = cipher[key]
+        word = (cb(word))
+      }
+    }
+    newSen.push(word);
+  }
+  return newSen.join(" ")
+
 }
+
+
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
   module.exports = suffixCipher;
-} catch(e) {
+} catch (e) {
   return null;
 }

@@ -37,9 +37,15 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 function mySimpleReduce(array, cb) {
   let res;
 
-  for (ele of array) {
+  for (let i = 1; i < array.length; i++) {
+    let ele = array[i];
 
+    if (res === undefined) {
+      res = array[0]
+    }
+    res = cb(res, ele);
   }
+  return res;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

@@ -29,7 +29,7 @@ console.log(result4);   // false
 *******************************************************************************/
 
 function none(array, cb) {
-  // Your code here
+  return array.every(ele => (!(cb(ele))))
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
